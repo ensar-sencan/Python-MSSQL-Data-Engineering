@@ -5,9 +5,6 @@ import urllib
 import time
 from datetime import datetime
 
-# ==========================================
-# 1. AYARLAR VE KİMLİK BİLGİLERİ
-# ==========================================
 # Telegram Ayarları (BURALARI KENDİ BİLGİLERİNLE DOLDUR)
 TOKEN = "8211810182:AAG408mteKNxG02so75DHvbgJL_eXSc8l5k"
 CHAT_ID = "1387971751"
