@@ -26,12 +26,16 @@ KRITIK_FIYAT_ALT_SINIR = 98000.0  # Örneğin BTC 96 binde ise, 98 binin altı d
 
 # 2. YARDIMCI FONKSİYONLAR
 def telegram_alarm_gonder(mesaj):
+    """Telegram'a anlık bildirim gönderen fonksiyon."""
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
     payload = {"chat_id": CHAT_ID, "text": mesaj}
     try:
-        requests.post(url, data=payload)
+        response = requests.post(url, data=payload)
+        # Eğer Telegram mesajı kabul etmezse (200 OK demezse), bize nedenini söylesin!
+        if response.status_code != 200:
+            print(f"TELEGRAM REDDETTİ: {response.text}")
     except Exception as e:
-        print(f"Telegram Gönderim Hatası: {e}")
+        print(f"SİSTEM HATASI: {e}")
 
 # SQL Bağlantısını Kur
 conn_str = f'DRIVER={{{Driver}}};SERVER={Server};DATABASE={Database};Trusted_Connection=yes;'
