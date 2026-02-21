@@ -1,4 +1,4 @@
-# Real-Time Data Engineering pipeline
+# Real-Time Data Engineering Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)
 ![MSSQL](https://img.shields.io/badge/Microsoft%20SQL%20Server-Data%20Warehouse-red?style=flat&logo=microsoft-sql-server)
